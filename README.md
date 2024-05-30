@@ -35,7 +35,7 @@ To run this Django application using Docker, follow these steps:
 + docker pull` /videomeeting_django:v1 `
 Run the Docker container:
 + docker run `-p 8000:8000 /videomeeting_django:v1`
-+ Access the Django application in your web browser: Open your web browser and go to `http://localhost:8000/ to access the Django Video meeting App`.
++ Access the Django application in your web browser: Open your web browser and go to `http://localhost:8000/` to access the Django Video meeting App.
 
 # Contributing
 Contributions to the project are welcome! Please fork the repository, make your changes, and submit a pull request for review. Make sure to follow the project's coding standards and guidelines.
