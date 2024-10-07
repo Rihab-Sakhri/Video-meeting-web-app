@@ -32,8 +32,23 @@ Video-meeting web app built with Django, integrated with ZegoCloud's video confe
 # Docker Usage
 To run this Django application using Docker, follow these steps:
 + Pull the Docker image from Docker Hub:
-+ docker pull` /videomeeting_django:v1 `
++ docker pull` /videomeeting_django:v1 
 Run the Docker container:
+
+
+`FROM ubuntu:latest # Heavy base image`
+`WORKDIR /app`
+`COPY . .`
+`RUN apt-get update && apt-get install -y golang`
+`RUN go build -o myapp .`
+`CMD ["./myapp"]`
+
+
+
+
+
+
+
 + docker run `-p 8000:8000 /videomeeting_django:v1`
 + Access the Django application in your web browser: Open your web browser and go to `http://localhost:8000/` to access the Django Video meeting App.
 
