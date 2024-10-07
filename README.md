@@ -37,11 +37,16 @@ Run the Docker container:
 
 
 ```sh
-FROM ubuntu:latest # Heavy base image
+# First stage: build the Go binary
+FROM golang:1.20 AS builder
 WORKDIR /app
 COPY . .
-RUN apt-get update && apt-get install -y golang
 RUN go build -o myapp .
+
+# Second stage: create a minimal image
+FROM alpine:latest
+WORKDIR /root/
+COPY --from=builder /app/myapp .
 CMD ["./myapp"]
 ```
 
