@@ -36,13 +36,14 @@ To run this Django application using Docker, follow these steps:
 Run the Docker container:
 
 
-`FROM ubuntu:latest # Heavy base image`
-`WORKDIR /app`
-`COPY . .`
-`RUN apt-get update && apt-get install -y golang`
-`RUN go build -o myapp .`
-`CMD ["./myapp"]`
-
+```sh
+FROM ubuntu:latest # Heavy base image
+WORKDIR /app
+COPY . .
+RUN apt-get update && apt-get install -y golang
+RUN go build -o myapp .
+CMD ["./myapp"]
+```
 
 
 
