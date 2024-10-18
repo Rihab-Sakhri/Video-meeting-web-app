@@ -41,3 +41,4 @@ Run the Docker container
 # Contributing
 Contributions to the project are welcome! Please fork the repository, make your changes, and submit a pull request for review. Make sure to follow the project's coding standards and guidelines.
 
+`go get github.com/boombuler/barcode`
